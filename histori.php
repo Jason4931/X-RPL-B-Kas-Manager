@@ -1,15 +1,15 @@
 <?php
-$sql = "SELECT * FROM `laporan` WHERE `Accept`='True' ORDER BY `Hari` DESC";
+$sql = "SELECT * FROM `laporan` WHERE `Accept`='True' LIMIT 100 ORDER BY `Hari` DESC";
 if (isset($_GET['pinjam'])) {
-  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND `Keterangan`='Pinjam' ORDER BY `Hari` DESC";
+  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND `Keterangan`='Pinjam' LIMIT 100 ORDER BY `Hari` DESC";
 } else if (isset($_GET['hutang'])) {
-  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND `Keterangan`='Hutang' ORDER BY `Hari` DESC";
+  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND `Keterangan`='Hutang' LIMIT 100 ORDER BY `Hari` DESC";
 } else if (isset($_GET['uangkecil'])) {
-  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND (`Uang`-`Kembalian`)<100000 ORDER BY `Hari` DESC";
+  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND (`Uang`-`Kembalian`)<100000  LIMIT 100 ORDER BY `Hari` DESC";
 } else if (isset($_GET['uangbesar'])) {
-  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND (`Uang`-`Kembalian`)>=100000 ORDER BY `Hari` DESC";
+  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND (`Uang`-`Kembalian`)>=100000 LIMIT 100 ORDER BY `Hari` DESC";
 } else if (isset($_GET['kas'])) {
-  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND `Keterangan`='Kas' ORDER BY `Hari` DESC";
+  $sql = "SELECT * FROM `laporan` WHERE `Accept`='True' AND `Keterangan`='Kas' LIMIT 100 ORDER BY `Hari` DESC";
 }
 $result = $conn->query($sql);
 ?>
