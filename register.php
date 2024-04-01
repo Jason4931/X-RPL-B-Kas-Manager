@@ -17,7 +17,7 @@ if (isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["passwor
 ?>
 
 <body class="d-flex align-items-center py-4 bg-body-tertiary" style="overflow-x: hidden; background-image: url('./gambar/Bruh2.png'); background-repeat: no-repeat; background-size: cover;">
-  <main class="container-fluid w-100 m-auto">
+  <main class="container-fluid w-100 m-auto" style="height: 100vh;">
     <div class="row">
       <div class="col-lg-3 col-md-2 col-sm-1 col-0"></div>
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 ml-auto">
@@ -45,5 +45,4 @@ if (isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["passwor
       <div class="col-lg-3 col-md-2 col-sm-1 col-0"></div>
     </div>
   </main>
-
-  </html>
+</html>
